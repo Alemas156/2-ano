@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Atividade_sei_la_das_quanta
+{
+    internal class Produto
+    {
+            public string Nome;
+            public double preco;
+            public int Quantidade;
+
+        public double ValorTotalEstoque()
+        {
+            return preco * Quantidade;
+        }
+        public void AdicionarProdutos(int quantidade)
+        {
+            Quantidade += quantidade;
+        }
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+        public override string ToString()
+        {
+            return Nome
+            + ", $"
+            + preco.ToString("F2", CultureInfo.InvariantCulture)
+            + ", "
+            + Quantidade
+            +"unidade, Total: $ "
+            + ValorTotalEstoque().ToString("F2", CultureInfo.InvariantCulture);
+        }
+
+
+// CLasse!
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+namespace Atividade_sei_la_das_quanta
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Produto p = new Produto();
+
+            Console.WriteLine("Entre com os dados do produto: ");
+            Console.WriteLine("Nome do produto: ");
+            p.Nome = Console.ReadLine();
+            Console.WriteLine("Preço do produto: ");
+            p.preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Quatidade do produto: ");
+            p.Quantidade = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("");
+            Console.WriteLine("Dados do produto: "+p);
+            Console.WriteLine("");
+
+            int qte = int.Parse(Console.ReadLine() );
+            p.AdicionarProdutos(qte);
+            Console.WriteLine("");
+            Console.WriteLine("Dados Atualizados: " + p);
+            Console.WriteLine("");
+
+            Console.WriteLine("A quantidade de produtos que irá ser removida do estoque: ");
+            qte = int.Parse(Console.ReadLine());
+            p.RemoverProdutos(qte);
+            Console.WriteLine("");
+            Console.WriteLine("Dados Atualizados: " + p);
+
+
+
+        }
+    }
+}
+
+
+    }
+}
+
+
+//  C#!
