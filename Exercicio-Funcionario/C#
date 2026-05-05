@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+namespace Atividade_5ou4_nãosei
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Funcionario F = new Funcionario();
+            Console.WriteLine("Digite os dados do funcionario");
+            Console.WriteLine("NOme do funcionario: ");
+            F.Nome = Console.ReadLine();
+            Console.Write("Seu slario bruto: ");
+            F.salarioB = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Imposto: ");
+            F.imposto = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            Console.WriteLine("Funcionario: " + F);
+
+            Console.WriteLine("Em quantos porcento em porcentagem deseja aumentar salario? ");
+            double porcent = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            F.AumentarSalario(porcent);
+            Console.WriteLine("");
+            Console.Write("Dados Atualizados: "+F);
+            
+        }
+    }
+}
