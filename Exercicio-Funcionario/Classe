@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Atividade_5ou4_nãosei
+{
+    internal class Funcionario
+    {
+        public string Nome;
+        public double salarioB;
+        public double imposto;
+
+
+        public double SalarioLiq()
+        {
+            return salarioB - imposto;
+        }
+        public void AumentarSalario(double porcentagem)
+        {
+
+            salarioB = salarioB + (salarioB * porcentagem) / 100.00;
+        }
+        public override string ToString()
+        {
+            return Nome
+            + ", R$ "
+            + SalarioLiq();
+        }
+    }
+}
