@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Login</title>
+</head>
+<body>
+    <h1 style="background-color: red;">Bem vindo ao site de herois da Marvel</h1>
+    <h2>Para entrar no site faça login</h2>
+    <div class="Dic">
+        <h2 style="border-style: solid; border-color: black;">Login</h2>
+        <form>
+  <label for="fname">Email:</label><br>
+  <input type="email" id="fname" name="fname"><br>
+  <label for="lname">senha:</label><br>
+  <input type="senha" id="lname" name="lname">
+        </form>
+    </div>
+</body>
+</html>
