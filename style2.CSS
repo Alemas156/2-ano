@@ -1,0 +1,19 @@
+body{
+    background-image: url(Goat.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.opa, h1{
+    color: blue;
+    border: solid;
+    border-color: rgb(252, 0, 0);
+    background-color: black;
+    font-size: 80px;
+    width: 500px;
+}
